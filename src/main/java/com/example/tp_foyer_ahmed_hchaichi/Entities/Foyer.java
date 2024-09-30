@@ -21,6 +21,10 @@ public class Foyer implements Serializable {
 
     long capacitefoyer;
 
+    @OneToOne(mappedBy = "foyer")
+    private Universite universite;
+
+
 
 
 
