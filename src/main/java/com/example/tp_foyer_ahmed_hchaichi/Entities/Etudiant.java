@@ -24,7 +24,7 @@ public class Etudiant implements Serializable {
     String prenomEt;
     @Column(name = "cin")
 
-//gi
+//git
     long cin;
     @Column(name = "ecole")
 
