@@ -4,6 +4,7 @@ package com.example.tp_foyer_ahmed_hchaichi.Entities;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.Set;
 
 
 @Entity
@@ -22,6 +23,13 @@ public class Chambre implements Serializable {
 
     @Enumerated(EnumType.STRING)
     TypeChambre typeC;
+
+    @OneToMany
+    Set<Reservation>res;
+
+    @ManyToOne
+
+    private Bloc blcham;
 
 
 

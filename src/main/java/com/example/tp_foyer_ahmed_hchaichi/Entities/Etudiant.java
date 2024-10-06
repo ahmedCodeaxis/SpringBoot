@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 @Table(name = "Etudiant")
@@ -32,6 +33,14 @@ public class Etudiant implements Serializable {
     @Column(name = "Date naissance")
 
     LocalDate datedenaissance;
+
+    @ManyToMany
+    @JoinTable(
+            name = "Etudiant_Reservation", // Nom de la table de jointure
+            joinColumns = @JoinColumn(name = "etudiant_id"), // Clé étrangère vers Etudiant
+            inverseJoinColumns = @JoinColumn(name = "reservation_id") // Clé étrangère vers Reservation
+    )
+    private Set<Reservation> etRes;
 
 
 }

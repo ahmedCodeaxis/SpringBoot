@@ -3,6 +3,7 @@ package com.example.tp_foyer_ahmed_hchaichi.Entities;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.Set;
 
 
 @Entity
@@ -19,6 +20,14 @@ public class Bloc implements Serializable {
     @Column(name = "Capacitebloc")
 
     long capaciteBloc;
+
+@ManyToOne
+    private Foyer foyer;
+
+    @OneToMany(mappedBy = "blcham")
+    private Set<Chambre> chambre;
+
+
 
 
 

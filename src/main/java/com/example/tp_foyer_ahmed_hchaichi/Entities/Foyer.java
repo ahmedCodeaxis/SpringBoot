@@ -26,6 +26,4 @@ public class Foyer implements Serializable {
 
 
 
-
-
 }
