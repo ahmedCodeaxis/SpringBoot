@@ -21,7 +21,7 @@ public class Bloc implements Serializable {
 
     long capaciteBloc;
 
-@ManyToOne
+    @ManyToOne
     private Foyer foyer;
 
     @OneToMany(mappedBy = "blcham")
